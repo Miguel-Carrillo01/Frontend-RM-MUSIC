@@ -1,0 +1,314 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    background-color: #D5E5F2 ;
+}
+
+#HomeParking{
+    width: 100%;
+    height: auto;
+    /* background: white; */
+    background: #D5E5F2;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerParking{
+    width: 100%;
+    height: 15vh;
+    /* background: white; */
+    background: linear-gradient(to right, #04BF9D, #dfdfdf,#04BF9D);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+
+#nameUser{
+    font-size: 2.4rem;
+}
+.mainParking{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.modalNoti{
+    width: 75%;
+    height: 78%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    position: fixed;
+    flex-direction: column;
+    z-index: 2000;
+    color: rgb(0, 0, 0);
+    border: solid 1px #000000;
+    background: #d5e5f2;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 2%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: showModalUser 0.5s; 
+}
+
+.modalNoti > h2{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 2.4rem;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #dfdfdf, #04BF9D);
+    border-radius: 13px 13px 0px 0px;
+    border-top: solid 1px black;
+}
+
+.containerNoti{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.booking{
+    width: 100%;
+    border-bottom: solid 2px gray;
+    padding: 1rem;
+    /* text-align: center; */
+}
+
+.spanNoti{
+    color: #04BF9D;
+}
+
+.icon-bell{
+    cursor: pointer;
+}
+
+.infoStates{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+}
+.infoStates > p{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.info span{
+    margin-left: 1.6rem;
+}
+
+#iconInfo{
+    font-size: 1.6rem;
+    margin-bottom: 17px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.icon-car{
+    width: 10%;
+    height: 10px;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.available{
+    color: #7ED957;
+}
+
+.notAvailable{
+    color: #5271FF;
+}
+
+.busy{
+    color: rgb(246, 35, 35);
+
+}
+
+.reserved{
+    color: #e9e95c;
+}
+
+
+.availabilityMap{
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    border-left:  solid 2px gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+/* ESTILOS MODAL CAMBIO DE ESTADOS */
+
+.modalState{
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    background-color: white;
+    position: fixed;
+    right: 25%;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+
+.contStates{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+/* Perfil del parqueadero */
+.parkingProfile{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.containerall{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.containerInfo{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.personalInfo{
+    width: 50%;
+    height: 100%;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    /* background-color: #553939; */
+}
+
+.parkingInfo > h4{
+    align-self: center;
+    /* margin-bottom: 2rem; */
+}
+
+.personalInfo >h4{
+    align-self: center;
+    /* margin-bottom: 4rem; */
+
+}
+
+.parkingInfo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 1.4rem;
+    justify-content: space-evenly;
+    /* background-color: #aeacac; */
+
+}
+
+.contFuncBtns{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.contFuncBtns > button{
+    margin: 2rem 2rem 3rem 0rem;
+}
+
+
+/* Estilos inputs actualizar informacion */
+.containerInputs{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contBtns{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Estilos para las alertas swamalert */
+
+.titleUpdatePass{
+    color: #04BF9D;
+}
+
+.btnUpdatePass {
+    background: linear-gradient(to right, #04BF9D, #D5E5F2)!important;
+    color: black !important;
+}
+
+.btnUpdatePass:hover{
+    background: linear-gradient(to right, #000000, #04BF9D) !important;
+    color: #ffffff !important;
+}
+
+/* Alerta incorrecta */
+.titleUpdateIncorrect{
+    color: red;
+}
+
+.btnIncorrectPass{
+    background: linear-gradient(to right, #000000, #d62d13) !important;
+}

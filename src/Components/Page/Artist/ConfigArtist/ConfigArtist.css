@@ -1,0 +1,74 @@
+#pageConfigArtist{
+    width: 100vw;
+    height: 100vh;
+}
+
+.headerConfig{
+    width: 100%;
+    height: 15vh;
+    background: white;
+    background: linear-gradient(to right, #000000, #F83EA3,  #423D40);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-y: hidden;
+}
+
+.headerConfig > h3{
+    font-size: 2rem;
+}
+.headerConfig > h2{
+    font-size: 2.6rem;
+    color: white;
+    margin-left: 2rem;
+}
+.mainConfig{
+    width: 100%;
+    height: 85%;
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+}
+.mainConfig >h2{
+    font-size: 3rem;
+    text-align: center;
+    align-self: center;
+    color: white;
+    /* margin-top: 2rem; */
+}
+
+.containerContent{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.profileData{
+    width: 50%;
+    height: 100%;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    color: #ffffff;
+}
+
+.profileData >p{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.profileSongs{
+    width: 50%;
+    height: 100%;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    color: #ffffff;
+}
