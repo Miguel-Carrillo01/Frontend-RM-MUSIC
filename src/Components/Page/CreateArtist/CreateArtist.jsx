@@ -237,7 +237,7 @@ export const CreateArtist = () => {
                         className='selectCountry'
                         name="country"
                         value={isCountrySelected ? selectedCountry : null}
-                        options={filteredCountries.slice(0, 4)}
+                        options={filteredCountries.slice(0, 2)}
                         onChange={handleCountryChange}
                         onInputChange={handleSearchChange}
                         placeholder="Seleccione un país..."

@@ -11,7 +11,7 @@ import { HomeUser } from './Components/Page/Artist/HomeUser/HomeUser';
 import { DetailArtist } from './Components/Page/Artist/DetailArtist/DetailArtist';
 // import { CreateAccount } from './Components/Page/CreateAccount/CreateAccount';
 // import { MainLogIn} from './Components/Layouts/MainLogIn/MainLogIn';
-// import { RecoverPassword } from './Components/Page/RecoverPassword/RecoverPassword';
+import { RecoverPassword } from './Components/Page/RecoverPassword/RecoverPassword';
 import { ProfileArtist } from './Components/Page/Artist/ProfileArtist/ProfileArtist';
 import { ConfigArtist } from './Components/Page/Artist/ConfigArtist/ConfigArtist';
 // import { HomeParking } from './Components/Page/AdminParking/HomeParking/HomeParking';
@@ -30,12 +30,12 @@ function App() {
         <Route path="/ConfigArtist" element={<ConfigArtist/>}></Route>
         <Route path="/CreateListener" element={<CreateListener/>}></Route>
         <Route path="/CreateArtist" element={<CreateArtist/>}></Route>
+        <Route path="/RecoverPassword" element={<RecoverPassword/>}></Route>
 
         {/* <Route path="/CreateAccount" element={<CreateAccount/>}></Route> */}
         {/* <Route path="/LogIn" element={<MainLogIn/>}></Route>
         <Route path="/HomeUser" element={<HomeUser/>}></Route>
         <Route path="/HomeParking" element={<HomeParking/>}></Route>
-        <Route path="/RecoverPassword" element={<RecoverPassword/>}></Route>
         <Route path="/ProfileUser" element={<ProfileUser/>}></Route>
         <Route path="/ProfileParking" element={<ProfileParking/>}></Route>
         <Route path="/DetailParking" element={<DetailPark/>}></Route> */}
