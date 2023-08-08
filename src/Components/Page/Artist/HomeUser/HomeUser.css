@@ -417,7 +417,8 @@ button:hover{
 #artistBio{
     /* height: 0%; */
     color: white;
-    font-size: 1.4rem;
+    margin-right: 30px;
+    font-size: 1.2rem;
     text-align: center;
 
 }
@@ -750,3 +751,24 @@ background: white;
 }
 
 
+
+.icon-heart{
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+.icon-heart.liked {
+    color: red;
+  }
+
+
+  .user-info{
+    width: 100%;
+    font-size: 1.2rem;
+    color: white;
+  }
+
+.producer-info >p >span{
+    color: #F83EA3;
+}

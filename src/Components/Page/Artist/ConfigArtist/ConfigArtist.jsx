@@ -100,10 +100,21 @@ export const ConfigArtist = () => {
           })
     }
 
-    const [showDiv, setShowDiv] = useState(false);
-    const toggleDiv = () => {
-      setShowDiv(!showDiv);
-    };
+    const correctAddSong = () =>{
+      Swal.fire({
+          icon: 'success',
+          title: '¡Excelente!',
+          html: 'Canción Agregada Exitosamente',
+          showConfirmButton: true,
+          confirmButtonText: 'Hecho',
+          customClass: {
+            title: 'titleUpdatePass',
+            content: 'textUpdatePass',
+            confirmButton: 'btnUpdatePass',
+          },
+        })
+      };
+
 
     const handleCancelClick = () => {
       setIsEditing(false);
@@ -269,7 +280,7 @@ const addSongModal = () => {
         // Muestra una alerta o realiza cualquier otra acción deseada
         Swal.fire({
           icon: 'success',
-          title: 'Canción eliminado',
+          title: 'Canción eliminada',
           text: 'Canción eliminada correctamente',
           confirmButtonText: 'OK',
         });
@@ -307,7 +318,7 @@ const addSongModal = () => {
         getUser();
         // vehicleModal();
         addSongModal()
-        // correctAddVehicle();
+        correctAddSong();
     
        } catch (error) {
        incorrectUpData()
@@ -368,7 +379,7 @@ const addSongModal = () => {
             <FormGroup onChange={(e) => setEmail(e.target.value)} nameInput="email" inputType="email" contLabel="Correo" />
             <FormGroup onChange={(e) => setNewPassword(e.target.value)} nameInput="newPassword" inputType="password" contLabel="Nueva Contraseña" />
             <FormGroup onChange={(e) => setConfirmPassword(e.target.value)} nameInput="confirmPassword" inputType="password" contLabel="Confirmar Nueva Contraseña" />
-            <div className="contFuncBtns">
+            <div className="contFuncBtnsConfig">
                 <button type='submit'>Actualizar Contraseña</button>
                 <button onClick={()=> setEditingPassword(false)}>Cancelar</button>
               </div>
@@ -398,11 +409,11 @@ const addSongModal = () => {
                         </span>
                         </p>
                         <i onClick={() => deleteSong(index)} className="icon-trash"></i>
-                        <i className="icon-pencil"></i>
+                        {/* <i className="icon-pencil"></i> */}
                     </li>
                     ))}
                     {songList.length < 2 && (
-                <div onClick={addSongModal}  className="addSong">
+                <div onClick={addSongModal}  className="addSongIcon">
                   +
                 </div>
               )}

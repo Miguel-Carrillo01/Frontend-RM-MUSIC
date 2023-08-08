@@ -86,8 +86,7 @@ export const HomeUser = () => {
   // console.log(styles);
   return (
     <div id='HomeUser'>
-      {/* <ModalDetails functionGetItem={itemSelected} isOpen={isOpenDetail}  onRequestClose={handleCloseDetail} closeModal={handleCloseDetail}/> */}
-        <header className='headerUser'>
+      <header className='headerUser'>
           <h2 id='tittleMusic'>R.M. MUSIC</h2>
           
           {userData ? ( // Si userData existe (el usuario ha iniciado sesión)
@@ -128,13 +127,6 @@ export const HomeUser = () => {
               urlImage={item.profileImg}
               />
             ))}
-
-            <CardArtist 
-            nameArtist={"Mora"}
-            country={"Puerto Rico"}
-            urlImage={"https://res.cloudinary.com/miguelgo205/image/upload/v1690088744/carrmc/download_wyuehr.jpg"}
-            likes={5000}
-            />
           </div>     
         </main>
     </div>

@@ -10,6 +10,7 @@ export const DetailArtist = () => {
   const encodedEmail = searchParams.get('email');
   const decodedEmail = encodedEmail ? atob(encodedEmail) : null;
   const [dataArtist, setDataArtist] = useState()
+  const [isLiked, setIsLiked] = useState(false);
 
   
   const navigate = useNavigate();
@@ -50,10 +51,10 @@ export const DetailArtist = () => {
         // const response = await axios.post('https://backend-space-parking.onrender.com/api/users/meUserParking', { email: decodedEmail });
         const response = await axios.post('http://localhost:5000/api/users/meUserArtist', { email: decodedEmail });
         setDataArtist(response.data);
-        console.log(dataArtist);
+        // console.log(dataArtist);
         // console.log(response.data.songs);
         setSongList(response.data.songs)
-        console.log(songList);
+        // console.log(songList);
       }
     } catch (error) {
       console.log(error);
@@ -170,6 +171,44 @@ export const DetailArtist = () => {
       links[newIndex].classList.add("active");
     };
 
+    // likes
+    useEffect(() => {
+      // Verificar si el usuario ya dio like al artista en el localStorage
+      if (dataArtist) {
+        const artistId = dataArtist._id; // Reemplaza esto con el campo adecuado que contiene el ID del artista
+        const isLikedInLocalStorage = localStorage.getItem(artistId) === 'true';
+        setIsLiked(isLikedInLocalStorage);
+      }
+    }, [dataArtist]);
+
+    const handleLike = async () => {
+      try {
+        if (!userData) {
+          // Si el usuario no está logueado, puedes redirigirlo a la página de inicio de sesión
+          navigate('/LogIn');
+          return;
+        }
+        const artistId = dataArtist._id; // Reemplaza esto con el campo adecuado que contenga el ID del artista
+
+        // Verificar si el usuario ya dio like a este artista en el localStorage
+        const isLikedInLocalStorage = localStorage.getItem(artistId) === 'true';
+    
+        if (!isLikedInLocalStorage) {
+          // Hacer la solicitud al backend para dar like al artista
+          const response = await axios.post(`http://localhost:5000/api/users/addLikeArtist/${dataArtist.email}`);
+          
+          if (response.status === 200) {
+            setIsLiked(true);
+    
+            // Guardar la información en el localStorage
+            localStorage.setItem(artistId, 'true');
+          }
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
   return (
     <div id='pageDetail'>
         <header className='headerDetail'>
@@ -207,6 +246,16 @@ export const DetailArtist = () => {
 
 
           <div className="showSongs">
+          {userData && (
+            <div className="user-info">
+              {userData.roles === 'producer' && (
+                <div className="producer-info">
+                  <p> <span>Número del artista:</span> {dataArtist?.cellphone}</p>
+                  <p> <span>Correo del artista:</span>  {dataArtist?.email}</p>
+                </div>
+              )}
+            </div>
+          )}
           {songList && songList.map((song, index) => (
           <li className='oneSong' onClick={() => loadSong(index)} key={index}>
             <img className='oneImage' src={song.imgSong} alt="" />
@@ -227,6 +276,9 @@ export const DetailArtist = () => {
           <div className="infoArtist">
 
           <img alt='' id="coverInfo" src={dataArtist?.profileImg} />
+          {userData && (
+            <i onClick={handleLike} className={`icon-heart ${isLiked ? 'liked' : ''}`}></i>
+        )}
           <p id='artistBio'>
             {dataArtist?.biography}
           </p>

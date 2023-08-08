@@ -8,7 +8,7 @@ export const CardAccount = ({rol, message, icon, onClick}) => {
         <img className='iconAccount' src={icon} alt="" />
         <h2 id='rolAccount'>{rol}</h2>
       </div>
-      <div class="card-back">
+      <div className="card-back">
         <p>{message}</p>
       </div>
     </div>

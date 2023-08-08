@@ -19,7 +19,7 @@ export const ProfileArtist = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [isEditingPassword, setEditingPassword] = useState(false);
   const [name, setName] = useState(userData?.name);
-  const [cellphone, setCellphone] = useState(userData?.phone);
+  const [cellphone, setCellphone] = useState(userData?.cellphone);
   // Cambio de Contraseña
   const [currentPassword, setPassword] = useState("");
   const [email, setEmail] = useState("");

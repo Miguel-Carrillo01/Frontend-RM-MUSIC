@@ -85,7 +85,7 @@
 	height: 20%;
 	display: flex;
     /* cursor: pointer; */
-	/* justify-content: space-evenly; */
+	justify-content: space-between;
 	align-items: center;
 	margin-top: 2rem;
     /* text-align: center; */
@@ -98,18 +98,21 @@
 .oneSongConfig > img{
     width: 30%;
     height: 100%;
-    margin-right: 4rem;
+    /* margin-right: 4rem; */
     /* align-self: baseline !important; */
 }
 
 .oneSongConfig >p > .oneSongTitle{
-    margin-right: 4rem;
+    /* width: 30%; */
+    /* margin-right: 4rem; */
+    display: flex;
 }
 
 .oneSongConfig > i{
     margin-right: 3.4rem;
     font-size: 2rem;
     cursor: pointer;
+    align-self: center;
 }
 .oneSongConfig > i:hover{
     color: #F83EA3;
@@ -158,4 +161,21 @@
     font-size: 3rem;
     color: #F83EA3;
     margin-top: 2rem;
+}
+
+.addSongIcon{
+    font-size: 4rem;
+    cursor: pointer;
+}
+.addSongIcon:hover{
+    color: #F83EA3;
+    transition: .5s;
+
+}
+
+.contFuncBtnsConfig{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
