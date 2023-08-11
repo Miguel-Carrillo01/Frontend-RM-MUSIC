@@ -13,8 +13,7 @@ export const FormRecover = () => {
     Swal.fire({
       icon: 'success',
       title: 'Se ha enviado la nueva contraseña a tu correo',
-      // text: 'Datos incorrectos',
-      // footer: '<a href="">Why do I have this issue?</a>'
+
     })
   }
 
@@ -25,8 +24,6 @@ const [inputs, setInputs] = useState({
   email: "", 
 });
 
-// const [mensaje, setMensaje] = useState();
-// const [loading, setLoading] = useState(false);
 
 const { email } = inputs;
 
@@ -41,8 +38,7 @@ const onSubmit = async(e) => {
   };
   // setLoading(true)
   try{
-    // const response = await axios.patch("https://backend-space-parking.onrender.com/api/users/recoverPassword", Usuario)
-    const response = await axios.patch("https://localhost:5000/api/users/recoverPassword", Usuario)
+    const response = await axios.patch("http://localhost:5000/api/users/recoverPassword", Usuario)
     console.log(response.data);
     accountCreate()
     navigate('/')
@@ -51,8 +47,6 @@ const onSubmit = async(e) => {
     Swal.fire({
       icon: 'error',
       title: 'No se encuentra la cuenta',
-      // text: 'Datos incorrectos',
-      // footer: '<a href="">Why do I have this issue?</a>'
     })
   }
 }

@@ -179,3 +179,20 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+.smallHearth{
+    /* margin-top: 2rem; */
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    color: #F83EA3 !important;
+}
+#spanLikes{
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#spanLikes > .spanInfo{
+    margin-right: 0.5rem;
+}

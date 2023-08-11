@@ -394,6 +394,7 @@ const addSongModal = () => {
                 <div className="profileData">
                     <p><span className='spanInfo'>Nombre: </span> {userData?.name}</p>
                     <p><span className='spanInfo'>Correo: </span> {userData?.email}</p>
+                    <p id='spanLikes'><span  className='spanInfo'>Likes: </span> {userData?.likes}<i className='icon-heart liked smallHearth'></i> </p>
                     <p><span className='spanInfo'>Teléfono:</span> {userData?.cellphone}</p>
                     <p><span className='spanInfo'>Pais:</span> {userData?.country}</p>
                     <p><span className='spanInfo'>Biografía:</span> {userData?.biography}</p>
